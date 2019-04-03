@@ -17,6 +17,9 @@ def post_process_image(original_image, processed_image, segmentation):
     post_processed_img = cv2.bitwise_and(original_image.copy(),
                                          original_image.copy(),
                                          mask=segmentation)
+    # cleanup some of the small items
+    segmentation = cv2.dilate(cv2.erode(segmentation, np.ones([3, 3])),
+                              np.ones([5, 5]))
     # extract the contours of all objects and draw them into the image
     contours, _ = cv2.findContours(segmentation, cv2.RETR_TREE,
                                    cv2.CHAIN_APPROX_SIMPLE)
