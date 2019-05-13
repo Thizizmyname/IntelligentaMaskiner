@@ -108,3 +108,103 @@ def happy():
     keys.append([0.630064, 0.110406, 0.110406])
 
     return (names, keys, times)
+
+
+def suprised():
+
+    names = list()
+    times = list()
+    keys = list()
+
+    names.append("HeadPitch")
+    times.append([0.84, 1.36, 1.92, 2.6])
+    keys.append([-0.228638, -0.228638, -0.228638, -0.228638])
+
+    names.append("HeadYaw")
+    times.append([0.84, 1.36, 1.92, 2.6])
+    keys.append([-0.00174533, -0.21293, 0.179769, -0.00174533])
+
+    names.append("LAnklePitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([0.0802851, 0.0802851, 0.0802851])
+
+    names.append("LAnkleRoll")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.109956, -0.109956, -0.109956])
+
+    names.append("LElbowRoll")
+    times.append([0.8, 2.56])
+    keys.append([-0.940732, -0.940732])
+
+    names.append("LElbowYaw")
+    times.append([0.8, 2.56])
+    keys.append([-2.08567, -2.08567])
+
+    names.append("LHand")
+    times.append([0.8, 2.56])
+    keys.append([0.74, 0.74])
+
+    names.append("LHipPitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.0163635, -0.0163635, -0.0163635])
+
+    names.append("LHipRoll")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([0.109956, 0.109956, 0.109956])
+
+    names.append("LHipYawPitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.169297, -0.169297, -0.169297])
+
+    names.append("LKneePitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.0872665, -0.0872665, -0.0872665])
+
+    names.append("LWristYaw")
+    times.append([0.8, 2.56])
+    keys.append([-0.26529, -0.26529])
+
+    names.append("RAnklePitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([0.0802851, 0.0802851, 0.0802851])
+
+    names.append("RAnkleRoll")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([0.109956, 0.109956, 0.109956])
+
+    names.append("RElbowRoll")
+    times.append([0.8, 2.56])
+    keys.append([0.940732, 0.940732])
+
+    names.append("RElbowYaw")
+    times.append([0.8, 2.56])
+    keys.append([2.08567, 2.08567])
+
+    names.append("RHand")
+    times.append([0.8, 2.56])
+    keys.append([0.74, 0.74])
+
+    names.append("RHipPitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.0163635, -0.0163635, -0.0163635])
+
+    names.append("RHipRoll")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.109956, -0.109956, -0.109956])
+
+    names.append("RHipYawPitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.169297, -0.169297, -0.169297])
+
+    names.append("RKneePitch")
+    times.append([0.56, 0.84, 2.6])
+    keys.append([-0.0872665, -0.0872665, -0.0872665])
+
+    names.append("RWristYaw")
+    times.append([0.8, 2.56])
+    keys.append([0.26529, 0.26529])
+
+
+
+
+    return (names, keys, times)

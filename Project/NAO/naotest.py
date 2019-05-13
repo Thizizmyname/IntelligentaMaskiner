@@ -1,28 +1,37 @@
+#!/usr/bin/env python
+
 # Choregraphe simplified export in Python.
 
-# New_happy
 from naoqi import ALProxy
-import happy
+import emotion
 
 
-try:
-  # uncomment the following line and modify the IP if you use this script outside Choregraphe.
-  # motion = ALProxy("ALMotion", IP, 9559)
-  motion = ALProxy("ALMotion")
-  motion.angleInterpolation(names, keys, times, True)
-except BaseException, err:
-  print err
+def main(robotIP, port):
+    try:
+
+        motion = ALProxy("ALMotion", robotIP, port)
+        posture_proxy = ALProxy("ALRobotPosture", robotIP, port)
+
+        # Recomend to send robot to inital stand
+        # posture before any emotion
+        posture_proxy.goToPosture("Stand", 0.5)
+
+        names, keys, times = emotion.happy()
+        motion.angleInterpolation(names, keys, times, True)
 
 
-try:
-  # uncomment the following line and modify the IP if you use this script outside Choregraphe.
-  motion = ALProxy("ALMotion", "localhost", 46015)
-#   motion = ALProxy("ALMotion")
-  names, keys, times = happy()
-  motion.angleInterpolation(names, keys, times, True)
-  motion.angleInterpolation(names, keys, times, True)
-#   motion.angleInterpolation(names, keys, times, True)
-#   motion.angleInterpolation(names, keys, times, True)
-#   motion.angleInterpolation(names, keys, times, True)
-except BaseException, err:
-  print err
+
+
+        posture_proxy.goToPosture("Stand", 0.5)
+
+
+        names, keys, times = emotion.suprised()
+        motion.angleInterpolation(names, keys, times, True)
+
+
+    except BaseException, err:
+        print err
+
+
+if __name__ == "__main__":
+    main("localhost", 45845)
