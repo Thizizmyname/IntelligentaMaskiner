@@ -7,14 +7,17 @@ class EmotionSurprise(EmotionResponse):
     """
     Subclass of EmotionResponse for generating a surprise virtual emotion
     Author: Adam Ross
-    Date: 08/05/2019
+    Date: 15/05/2019
     """
 
     SURPRISE = "emotion_surprise\n"
+    UTTERANCE = None
+    GAZE = None
 
     def __init__(self, vh_conn):
         """
         Class constructor
         :param vh_conn: the IrisTk Virtual Human socket connection
         """
-        EmotionResponse.__init__(self, vh_conn, self.SURPRISE)
+        EmotionResponse.__init__(self, vh_conn, self.SURPRISE, self.GAZE,
+                                 self.UTTERANCE)

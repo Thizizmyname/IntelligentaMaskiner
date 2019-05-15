@@ -1,8 +1,7 @@
 *.swp
-
+/venv/
 .idea/
 .vscode/
-
-
 *.pyc
 */pynaoqi-python2.7-2.1.2.17-linux64/
+/Project/emotional_synthesis/venv/

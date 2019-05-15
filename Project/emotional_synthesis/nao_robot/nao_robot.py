@@ -32,4 +32,4 @@ class NaoRobot:
         """
         Displays a generated NAO robot emotional body language expression
         """
-        pass
+        self.emotions[emotion].generate_emotion()

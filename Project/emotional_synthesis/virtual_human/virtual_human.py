@@ -1,9 +1,6 @@
 #!/usr/bin/env python2.7
 
-from sys import stdout
-from time import sleep
 from threading import Thread
-from multiprocessing import Queue
 from socket import socket, AF_INET, SOCK_STREAM
 
 from emotion_responses.emotion_anger import EmotionAnger
@@ -33,7 +30,7 @@ class VirtualHuman(Thread):
         :param port: the port number for connecting to the IrisTk software
         """
         Thread.__init__(self)
-        self.daemon, self.running, self.rcvd_queue = True, False, Queue()
+        self.daemon = True
         self.conn = socket(AF_INET, SOCK_STREAM)
         self.connect(address, port)
         self.emotions = {'happiness': EmotionHappiness(self.conn),
@@ -43,23 +40,6 @@ class VirtualHuman(Thread):
                          'disgust': EmotionDisgust(self.conn),
                          'surprise': EmotionSurprise(self.conn)}
 
-    def run(self):
-        """
-        Overrides Thread run() method to receive acknowledgements from IrisTk
-        """
-        if self.running:
-            msg_bfr = ''
-
-            while self.running:
-                msg_bfr += self.conn.recv(self.BUFFER).decode(self.ENCODING)
-
-                while self.END_MRK in msg_bfr:
-                    self.rcvd_queue.put(msg_bfr[:msg_bfr.find(self.END_MRK)])
-                    msg_bfr = msg_bfr[msg_bfr.find(self.END_MRK) +
-                                      len(self.END_MRK):]
-                sleep(self.SLEEP_TIME)
-            print "Ending input reader"
-
     def connect(self, address, port):
         """
         Connects to the IrisTk Virtual Human software
@@ -68,7 +48,6 @@ class VirtualHuman(Thread):
         """
         try:
             self.conn.connect((address, port))
-            self.running = True
             self.start()
         except Exception as e:
             print "Could not connect to server:\n", e
@@ -78,10 +57,6 @@ class VirtualHuman(Thread):
         Displays a generated virtual emotional expression
         """
         self.emotions[emotion].generate_emotion()
-        print "Waiting for executed ack responses:", stdout.flush()
-
-        while self.rcvd_queue.qsize() > 0:
-            print "Received:", self.rcvd_queue.get()
 
     def disconnect(self):
         """

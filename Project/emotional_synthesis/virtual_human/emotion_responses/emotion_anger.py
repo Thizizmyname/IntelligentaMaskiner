@@ -7,14 +7,17 @@ class EmotionAnger(EmotionResponse):
     """
     Subclass of EmotionResponse for generating an anger virtual emotion
     Author: Adam Ross
-    Date: 08/05/2019
+    Date: 15/05/2019
     """
 
     ANGER = "emotion_anger\n"
+    UTTERANCE = "grrrr\n"
+    GAZE = None
 
     def __init__(self, vh_conn):
         """
         Class constructor
         :param vh_conn: the IrisTk Virtual Human socket connection
         """
-        EmotionResponse.__init__(self, vh_conn, self.ANGER)
+        EmotionResponse.__init__(self, vh_conn, self.ANGER, self.GAZE,
+                                 self.UTTERANCE)

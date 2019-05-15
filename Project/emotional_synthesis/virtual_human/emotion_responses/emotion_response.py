@@ -39,8 +39,7 @@ class EmotionResponse:
         self.conn.sendall((self.GESTURE + self.gesture).encode(self.ENCODING))
 
         if self.gaze:
-            self.conn.sendall(self.GAZE, self.gaze[0], self.gaze[1],
-                              self.gaze[2], self.gaze[3])
+            self.conn.sendall((self.GAZE + self.gaze).encode(self.ENCODING))
 
     def reset_emotion(self):
         """
