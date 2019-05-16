@@ -22,11 +22,11 @@ def main(robotIP, port):
 
 
 
-        posture_proxy.goToPosture("Stand", 0.5)
+        # posture_proxy.goToPosture("Stand", 0.5)
 
 
-        names, keys, times = emotion.suprised()
-        motion.angleInterpolation(names, keys, times, True)
+        # names, keys, times = emotion.suprised()
+        # motion.angleInterpolation(names, keys, times, True)
 
 
     except BaseException, err:
@@ -34,4 +34,4 @@ def main(robotIP, port):
 
 
 if __name__ == "__main__":
-    main("localhost", 45845)
+    main("localhost", 41331)
