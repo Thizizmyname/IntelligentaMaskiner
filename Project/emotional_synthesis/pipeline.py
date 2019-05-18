@@ -18,9 +18,9 @@ class Pipeline:
     PORT_VH = 1337  # the port for connecting to the Virtual Human
     EMOTIONS = {"happiness": "happiness",
                 "sadness": "sadness",
-                "anger": "anger",
+                "anger": "fear",
                 "fear": "fear",
-                "disgust": "disgust",
+                "disgust": "sadness",
                 "surprise": "surprise"}  # mapping of input and output emotions
     SLEEP_TIME = 5
     PATH = "data/"
