@@ -5,7 +5,7 @@ class EmotionResponse:
     """
     Superclass for generating IrisTk Virtual Human emotional response displays
     Author: Adam Ross
-    Date: 08/05/2019
+    Date: 23/05/2019
     """
 
     GESTURE = "gesture:"
@@ -36,6 +36,9 @@ class EmotionResponse:
 
         if self.utterance:
             self.conn.sendall((self.SAY + self.utterance).encode(self.ENCODING))
+
+            if len(self.utterance) > 10:
+                self.conn.sendall((self.SAY + self.utterance).encode(self.ENCODING))
         self.conn.sendall((self.GESTURE + self.gesture).encode(self.ENCODING))
 
         if self.gaze:

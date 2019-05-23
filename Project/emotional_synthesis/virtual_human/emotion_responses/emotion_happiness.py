@@ -7,7 +7,7 @@ class EmotionHappiness(EmotionResponse):
     """
     Subclass of EmotionResponse for generating a happiness virtual emotion
     Author: Adam Ross
-    Date: 15/05/2019
+    Date: 23/05/2019
     """
 
     HAPPINESS = "emotion_happiness\n"

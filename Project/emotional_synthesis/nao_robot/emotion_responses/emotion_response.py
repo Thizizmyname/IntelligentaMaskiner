@@ -1,5 +1,6 @@
 #!/usr/bin/env python2.7
 
+from abc import abstractmethod
 from naoqi import ALProxy
 
 
@@ -22,8 +23,8 @@ class EmotionResponse:
         self.sessions = {self.MOTION: ALProxy(self.MOTION, address, port),
                          self.POSTURE: ALProxy(self.POSTURE, address, port)}
 
+    @abstractmethod
     def generate_emotion(self):
         """
         Sends instructions to NAO Robot for emotional body language responses
         """
-        pass

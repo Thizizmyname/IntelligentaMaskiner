@@ -7,12 +7,12 @@ class EmotionSadness(EmotionResponse):
     """
     Subclass of EmotionResponse for generating a sadness virtual emotion
     Author: Adam Ross
-    Date: 15/05/2019
+    Date: 23/05/2019
     """
 
     SADNESS = "emotion_sadness\n"
-    UTTERANCE = "aoie\n"
-    GAZE = "0.0:-10.0:0.0:True\n"
+    UTTERANCE = "aoie aoie\n"
+    GAZE = None
 
     def __init__(self, vh_conn):
         """

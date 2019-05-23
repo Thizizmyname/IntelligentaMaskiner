@@ -7,11 +7,11 @@ class EmotionAnger(EmotionResponse):
     """
     Subclass of EmotionResponse for generating an anger virtual emotion
     Author: Adam Ross
-    Date: 15/05/2019
+    Date: 23/05/2019
     """
 
     ANGER = "emotion_anger\n"
-    UTTERANCE = "grrrr\n"
+    UTTERANCE = "grrrr grrrr\n"
     GAZE = None
 
     def __init__(self, vh_conn):

@@ -7,11 +7,11 @@ class EmotionSurprise(EmotionResponse):
     """
     Subclass of EmotionResponse for generating a surprise virtual emotion
     Author: Adam Ross
-    Date: 15/05/2019
+    Date: 23/05/2019
     """
 
     SURPRISE = "emotion_surprise\n"
-    UTTERANCE = None
+    UTTERANCE = "huouo\n"
     GAZE = None
 
     def __init__(self, vh_conn):

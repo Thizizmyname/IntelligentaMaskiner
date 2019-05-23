@@ -7,7 +7,7 @@ class EmotionHappiness(EmotionResponse):
     """
     Subclass of EmotionResponse for generating a happiness expression on robot
     Author: Adam Ross & Alexis Remmers
-    Date: 08/05/2019
+    Date: 23/05/2019
     """
 
     def __init__(self, address, port):
