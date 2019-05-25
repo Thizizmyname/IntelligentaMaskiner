@@ -11,7 +11,7 @@ class EmotionSurprise(EmotionResponse):
     """
 
     SURPRISE = "emotion_surprise\n"
-    UTTERANCE = "huouo\n"
+    UTTERANCE = None
     GAZE = None
 
     def __init__(self, vh_conn):
