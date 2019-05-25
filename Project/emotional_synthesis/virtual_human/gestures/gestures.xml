@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<gestures framerate="50" xmlns="iristk.agent.face.gestures"
-		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		  xsi:schemaLocation="iristk.agent.face.gestures gestures.xsd">
+<gestures framerate="50" xmlns="iristk.agent.face.gestures" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="iristk.agent.face.gestures gestures.xsd">
 	<gesture name="emotion_sadness">
-		<param name="EXPR_SAD">16(0.5) 16(1)</param>
-		<param name="BROW_IN_LEFT">16(0.5) 16(1)</param>
-		<param name="BROW_IN_RIGHT">16(0.5) 16(1)</param>
-		<param name="BROW_UP_LEFT">16(0.5) 16(1.0)</param>
-		<param name="BROW_UP_RIGHT">16(0.5) 16(1.0)</param>
-		<param name="LOOK_DOWN">16(0.075) 16(0.15)</param>
-		<param name="PHONE_B_M_P">16(0.5) 16(1.0)</param>
+		<param name="EXPR_SAD">16(0.3) 40(0.6) 40(0.75) 40(1) </param>
+		<param name="BROW_IN_LEFT">16(0.3) 40(0.6) 40(0.75) 40(1)</param>
+		<param name="BROW_IN_RIGHT">16(0.3) 40(0.6) 40(0.75) 40(1)</param>
+		<param name="BROW_UP_LEFT">16(0.3) 40(0.6) 40(0.75) 40(1)</param>
+		<param name="BROW_UP_RIGHT">16(0.3) 40(0.6) 40(0.75) 40(1)</param>
+		<param name="LOOK_DOWN">40(0.0325) 40(0.075) 40(0.15) 40(0.5) 40(0.5) 40(0.5) 40(0.15) 40(0.075) 40(0)</param>
+		<param name="PHONE_B_M_P">16(0.3) 40(0.6) 40(0.75) 40(1)</param>
 		<param name="PHONE_CH_J_SH">16(0.065) 16(0.13)</param>
-		<param name="PHONE_F_V">16(0.5) 16(1.0)</param>
-		<param name="PHONE_N">16(0.1) 16(0.2)</param>
-		<param name="NECK_TILT">16(0) 40(10)</param>
+		<param name="PHONE_F_V">16(0.3) 40(0.6) 40(0.75) 40(1)</param>
+		<param name="PHONE_N">116(0.05) 40(0.1) 40(0.15) 40(0.2)</param>
+		<param name="NECK_TILT">16(0) 40(10) 40(10) 40(10) 40(10) 40(10) 40(10) 40(10) 40(10) 40(10)</param>
+		<param name="NECK_PAN">16(0) 40(10) 40(10) 40(-30) 40(-30) 40(10) 40(-10) 40(10) 40(10)</param>
 	</gesture>
 	<gesture name="emotion_fear">
-		<param name="EXPR_FEAR">16(1)</param>
-		<param name="BROW_UP_LEFT">16(1) 16(1)</param>
-		<param name="BROW_UP_RIGHT">16(1) 16(1)</param>
-		<param name="LOOK_UP">16(0.25) 16(0.25)</param>
-		<param name="PHONE_B_M_P">16(1.0) 16(1.0)</param>
-		<param name="PHONE_EE">16(0.5) 16(0.5)</param>
-		<param name="PHONE_EH">16(0.5) 16(0.5)</param>
+		<param name="EXPR_FEAR">16(0.5) 40(1) 16(0.75) 40(1)</param>
+		<param name="BROW_UP_LEFT">16(0.5) 40(1) 16(0.75) 40(1)</param>
+		<param name="BROW_UP_RIGHT">16(0.5) 40(1) 16(0.75) 40(1)</param>
+		<param name="LOOK_UP">16(0) 40(0.25) 40(0) 40(0.125) 40(0) 40(0.25)</param>
+		<param name="LOOK_DOWN">16(0) 40(0) 40(0.25) 40(0) 40(0.5) 40(0)</param>
+		<param name="PHONE_B_M_P">16(0.5) 40(1) 16(0.75) 40(1)</param>
+		<param name="PHONE_EE">16(0.25) 40(0.5) 16(0.375) 40(0.5)</param>
+		<param name="PHONE_EH">16(0.25) 40(0.5) 16(0.375) 40(0.5)</param>
+		<param name="LOOK_RIGHT">16(0) 40(1.0) 40(0.5) 40(1.0) 16(0.5) 16(0)</param>
+		<param name="NECK_PAN">16(0) 40(40) 40(20) 40(40)</param>
+		<param name="NECK_TILT">16(0) 40(-5) 40(0) 40(-5) 40(5)</param>
 	</gesture>
 	<gesture name="emotion_anger">
 		<param name="EXPR_ANGER">8(0.5) 16(1)</param>
@@ -32,44 +35,50 @@
 		<param name="EYE_SQUINT_LEFT">8(0.25) 16(0.5)</param>
 		<param name="EYE_SQUINT_RIGHT">8(0.25) 16(0.5)</param>
 		<param name="PHONE_B_M_P">8(0.75) 16(1)</param>
+		<param name="NECK_TILT">16(0) 40(5) 40(5) 40(5) 40(5)</param>
 	</gesture>
 	<gesture name="emotion_surprise">
-		<param name="SURPRISE">16(1)</param>
-		<param name="BROW_UP_LEFT">16(1) 16(1)</param>
-		<param name="BROW_UP_RIGHT">16(1) 16(1)</param>
-		<param name="PHONE_AAH">16(1.0) 16(1.0)</param>
-		<param name="PHONE_B_M_P">16(1.0) 16(1.0)</param>
-		<param name="PHONE_BIGAAH">16(1.0) 16(1.0)</param>
+		<param name="BLINK_LEFT">8(1) 40(0)</param>
+		<param name="BLINK_RIGHT">8(1) 40(0)</param>
+		<param name="SURPRISE">16(0.5) 16(0.75) 16(1.0)</param>
+		<param name="BROW_UP_LEFT">16(0.5) 16(0.75) 16(1)</param>
+		<param name="BROW_UP_RIGHT">16(0.5) 16(0.75) 16(1)</param>
+		<param name="PHONE_AAH">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(1.0) 16(0.75) 16(0.5)</param>
+		<param name="PHONE_B_M_P">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(1.0) 16(0.75) 16(0.5)</param>
+		<param name="PHONE_BIGAAH">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(1.0) 16(0.75) 16(0.5)</param>
+		<param name="NECK_TILT">8(-5.0) 40(0)</param>
+		<param name="NECK_PAN">8(0) 40(0) 16(10) 40(0) 40(-10)</param>
 	</gesture>
 	<gesture name="emotion_happiness">
-		<param name="EXPR_DISGUST">16(0.15)</param>
-		<param name="SMILE_CLOSED">16(0.5) 16(0.5) 16(0.5)</param>
-		<param name="SMILE_OPEN">16(1) 16(0.5) 16(1) 16(0.5) 16(1)</param>
-		<param name="SURPRISE">16(0.5) 16(0.5) 16(0.5)</param>
+		<param name="SMILE_CLOSED">16(0.5) 40(0.5) 16(0.5) 40(0.5) 16(1)</param>
+		<param name="SMILE_OPEN">16(1) 40(0.5) 16(1) 40(0.5) 16(0)</param>
+		<param name="SURPRISE">16(0.5) 16(0.5) 16(0.5) 16(0.5)</param>
 		<param name="BLINK_LEFT">40(0.15)</param>
 		<param name="BLINK_RIGHT">40(0.15)</param>
-		<param name="BROW_IN_LEFT">16(1) 16(1) 16(1)</param>
-		<param name="BROW_IN_RIGHT">16(1) 16(1) 16(1)</param>
-		<param name="BROW_UP_LEFT">16(0.5) 16(0.5) 16(0.5)</param>
-		<param name="BROW_UP_RIGHT">16(0.5) 16(0.5) 16(0.5)</param>
-		<param name="EARS_OUT">16(0.35) 16(0.35) 16(0.35)</param>
-		<param name="EPICANTHIC_FOLD">16(0.15) 16(0.15) 16(0.15)</param>
-		<param name="EYE_SQUINT_LEFT">16(1.0) 16(1.0) 16(1.0)</param>
-		<param name="EYE_SQUINT_RIGHT">16(1.0) 16(1.0) 16(1.0)</param>
-		<param name="LOOK_UP">16(0.17) 16(0.17) 16(0.17)</param>
-		<param name="PHONE_AAH">16(1.0) 16(1.0) 16(1.0)</param>
-		<param name="PHONE_I">16(1.0) 16(1.0) 16(1.0)</param>
-		<param name="NECK_TILT">16(-5.0) 16(0) 16(-5.0) 16(0)</param>
+		<param name="BROW_IN_LEFT">16(1) 16(1) 16(1) 16(1)</param>
+		<param name="BROW_IN_RIGHT">16(1) 16(1) 16(1) 16(1)</param>
+		<param name="BROW_UP_LEFT">16(0.5) 16(0.5) 16(0.5) 16(0.5)</param>
+		<param name="BROW_UP_RIGHT">16(0.5) 16(0.5) 16(0.5) 16(0.5)</param>
+		<param name="EARS_OUT">16(0.35) 16(0.25) 16(0.35) 16(0.25)</param>
+		<param name="EPICANTHIC_FOLD">16(0.15) 16(0.15) 16(0.15) 16(0.15)</param>
+		<param name="EYE_SQUINT_LEFT">16(1.0) 16(1.0) 16(1.0) 16(1.0)</param>
+		<param name="EYE_SQUINT_RIGHT">16(1.0) 16(1.0) 16(1.0) 16(1.0)</param>
+		<param name="LOOK_UP">16(0.17) 16(0.17) 16(0.17) 16(0.17)</param>
+		<param name="PHONE_AAH">16(1.0) 16(1.0) 16(1.0) 16(0.5)</param>
+		<param name="PHONE_I">16(1.0) 16(1.0) 16(1.0) 16(0.5)</param>
+		<param name="NECK_TILT">40(-10.0) 16(0) 40(-10.0) 16(0)</param>
 	</gesture>
 	<gesture name="emotion_disgust">
-		<param name="EXPR_DISGUST">16(1)</param>
-		<param name="BROW_DOWN_LEFT">16(1) 16(1)</param>
-		<param name="BROW_DOWN_RIGHT">16(1) 16(1)</param>
-		<param name="EYE_SQUINT_LEFT">16(1.0) 16(1.0)</param>
-		<param name="LOOK_RIGHT">16(1.0) 16(1.0)</param>
+		<param name="EXPR_DISGUST">16(0.5) 16(1)</param>
+		<param name="BROW_DOWN_LEFT">16(0.5) 16(1)</param>
+		<param name="BROW_DOWN_RIGHT">16(0.5 16(1)</param>
+		<param name="EYE_SQUINT_LEFT">16(0.5) 16(1.0)</param>
+		<param name="LOOK_RIGHT">16(0) 40(1.0) 40(1.0) 40(0)</param>
+		<param name="LOOK_LEFT">16(0) 40(0) 40(0) 40(0) 40(1.0) 40(0)</param>
+		<param name="LOOK_DOWN">16(0) 40(0) 40(0) 40(0) 40(0) 40(0) 40(1) 40(0)</param>
 		<param name="PHONE_I">16(1.0) 16(1.0)</param>
 		<param name="NECK_TILT">16(0) 40(-5)</param>
-		<param name="NECK_PAN">16(0) 40(10)</param>
+		<param name="NECK_PAN">16(0) 40(30) 40(30) 40(-30) 40(-30) 40(0) 16(30) 16(-30) 16(30) 16(-30)</param>
 	</gesture>
 	<gesture name="emotion_neutral">
 		<param name="EXPR_ANGER">16(0)</param>
@@ -103,9 +112,5 @@
 		<param name="PHONE_F_V">16(0)</param>
 		<param name="PHONE_I">16(0)</param>
 		<param name="PHONE_N">16(0)</param>
-		<param name="NECK_TILT">16(0)</param>
-		<param name="NECK_PAN">16(0) 32(0) 16(0)</param>
-		<param name="GAZE_PAN">16(0) 32(0) 16(0)</param>
-		<param name="GAZE_TILT">16(0) 32(0) 16(0)</param>
 	</gesture>
 </gestures>
