@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<gestures framerate="50" xmlns="iristk.agent.face.gestures" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="iristk.agent.face.gestures gestures.xsd">
+<gestures framerate="50"
+		  xmlns="iristk.agent.face.gestures"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="iristk.agent.face.gestures gestures.xsd">
 	<gesture name="emotion_sadness">
 		<param name="EXPR_SAD">16(0.3) 40(0.6) 40(0.75) 40(1) </param>
 		<param name="BROW_IN_LEFT">16(0.3) 40(0.6) 40(0.75) 40(1)</param>
@@ -43,15 +46,24 @@
 		<param name="SURPRISE">16(0.5) 16(0.75) 16(1.0)</param>
 		<param name="BROW_UP_LEFT">16(0.5) 16(0.75) 16(1)</param>
 		<param name="BROW_UP_RIGHT">16(0.5) 16(0.75) 16(1)</param>
+<<<<<<< HEAD
 		<param name="PHONE_AAH">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(1.0) 16(0.75) 16(0.5)</param>
 		<param name="PHONE_B_M_P">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(1.0) 16(0.75) 16(0.5)</param>
 		<param name="PHONE_BIGAAH">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(1.0) 16(0.75) 16(0.5)</param>
+=======
+		<param name="PHONE_AAH">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(0.75) 16(0.5)</param>
+		<param name="PHONE_B_M_P">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(0.75) 16(0.5)</param>
+		<param name="PHONE_BIGAAH">16(0.5) 16(0.75) 40(1.0) 16(0.75) 40(1.0) 40(0.75) 16(0.5)</param>
+>>>>>>> dd43c87826ed8eca9dbfe7dbe59ab2c18ac2f808
 		<param name="NECK_TILT">8(-5.0) 40(0)</param>
 		<param name="NECK_PAN">8(0) 40(0) 16(10) 40(0) 40(-10)</param>
 	</gesture>
 	<gesture name="emotion_happiness">
 		<param name="SMILE_CLOSED">16(0.5) 40(0.5) 16(0.5) 40(0.5) 16(1)</param>
+<<<<<<< HEAD
 		<param name="SMILE_OPEN">16(1) 40(0.5) 16(1) 40(0.5) 16(0)</param>
+=======
+>>>>>>> dd43c87826ed8eca9dbfe7dbe59ab2c18ac2f808
 		<param name="SURPRISE">16(0.5) 16(0.5) 16(0.5) 16(0.5)</param>
 		<param name="BLINK_LEFT">40(0.15)</param>
 		<param name="BLINK_RIGHT">40(0.15)</param>
