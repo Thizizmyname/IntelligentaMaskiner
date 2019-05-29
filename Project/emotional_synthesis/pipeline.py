@@ -10,8 +10,8 @@ from virtual_human.virtual_human import VirtualHuman
 class Pipeline:
     """
     Pipeline class for the Emotional Synthesis project
-    Author: Adam Ross
-    Date: 23/05/2019
+    Author: Adam Ross & Alexis Remmers
+    Date: 29/05/2019
     """
 
     ADDRESS = "127.0.0.1"  # Local host IP address
@@ -82,6 +82,21 @@ class Pipeline:
                 print "There is an error in the input emotions data:", e
                 self.close()
             sleep(self.SLEEP_TIME)
+
+    def emotional_synthesis_single(self, emotion):
+        """
+        Synthesises an emotional response from input emotion probability data
+        :param emotions_data: lists of floats representing emotion probability
+        """
+        try:
+            input_emotion = self.EMOTIONS_MAP.keys()[emotion.
+                                                     index(max(emotion))]
+            print "Retrieved data representing:", input_emotion.upper()
+            self.generate_emotion(self.EMOTIONS_MAP[input_emotion])
+
+        except Exception as e:
+            print "There is an error in the input emotions data:", e
+            self.close()
 
     def read_file(self, file_name):
         """
